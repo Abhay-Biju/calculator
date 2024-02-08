@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <center>
+      
+            <h1>CALCULATOR</h1>
+        <br>
+        <br>
+        <div id="cal">
+            <br>
+            <input style="border-radius: 30px;" id="result" class="i1" style="margin-top: 30px;" placeholder="Enter" type="text">
+            <br>
+            <br>
+            
+
+            <div class="row">
+                <button id="seven" onclick="displaynum(7)" class="b1"><i class="fa-solid fa-7 fa"></i></button>
+                <button id="eight" onclick="displaynum(8)"class="b1"><i class="fa-solid fa-8 fa"></i></button>
+                <button id="nine" onclick="displaynum(9)"class="b1"><i class="fa-solid fa-8 fa"></i></button>
+                <button id="multiply" onclick="displaynum('*')"class="b1"><i class="fa-solid fa-xmark fa-fade"></i></button>
+            </div>
+
+            <div class="row">
+                <button id="four" onclick="displaynum(4)" class="b1"><i class="fa-solid fa-4 fa"></i></button>
+                <button id="five" onclick="displaynum(5)" class="b1"><i class="fa-solid fa-5 fa"></i></button>
+                <button id="six" onclick="displaynum(6)" class="b1"><i class="fa-solid fa-6 fa"></i></button>
+                <button id="minus" onclick="displaynum('-')" class="b1"><i class="fa-solid fa-minus fa-beat-fade"></i></button>
+            </div>
+
+            <div class="row">
+                <button id="one" onclick="displaynum(1)" class="b1"><i class="fa-solid fa-1 fa"></i></button>
+                <button id="two" onclick="displaynum(2)" class="b1"><i class="fa-solid fa-2 fa"></i></button>
+                <button id="three" onclick="displaynum(3)" class="b1"><i class="fa-solid fa-3 fa"></i></button>
+                <button id="plus" onclick="displaynum('+')" class="b1"><i class="fa-solid fa-plus fa-fade"></i></button>
+            </div>
+
+            <div class="row">
+                <button id="zero" onclick="displaynum(0)" class="b1"><i class="fa-solid fa-0 fa"></i></button>
+                <button id="oo" onclick="displaynum(0)" class="b1">00</button>
+                <button id="" onclick="displaynum('.')"  class="b1">.</button>
+                <button id="" onclick="displaynum('/')" class="b1"><i class="fa-solid fa-divide fa-fade"></i></button>
+            </div>
+
+            <div class="row">
+                <button id="clbox" onclick="clearbox()" class="b1">AC</button>
+                <button onclick="removelastelement()" class="b1"><i class="fa-solid fa-delete-left fa"></i></button>
+                <button  onclick="evaluatexpression()" class="b2"><i class="fa-solid fa-equals fa" style="color: #ffffff;"></i></button>
+                
+            </div>
+
+        </div>
+
+   
+    </center>
+
+    <script>
+        // number enter
+        function displaynum(num){
+          result.value+=num 
+        }
+
+        //clear box
+
+        function clearbox(){
+            result.value=""
+        }
+
+        //expression evaluate
+
+        function evaluatexpression(){
+            //methode 1
+
+            // let exp=result.value
+            // output=eval(exp)
+            // result.value=output
+
+            //methode 2
+            result.value=eval(result.value)
+        }
+            //remove last elemrnt
+
+            function  removelastelement(){
+                result.value=result.value.slice(0,-1)
+            
+        }
+    </script>
+</body>
+</html>

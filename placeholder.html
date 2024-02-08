@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Apply transition to the placeholder position with a duration of 0.3 seconds */
+input {
+  transition: padding-top 0.3s, font-size 0.3s;
+  padding-top: 20px; /* Adjust this value to control the space for the placeholder */
+}
+
+/* Move the placeholder to the top and reduce its size on focus */
+input:focus::placeholder {
+  padding-top: 5px; /* Adjust this value to control the space between the top and placeholder */
+  font-size: 12px; /* Adjust this value to control the font size of the placeholder */
+}
+
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="Your Placeholder Text">
+
+</body>
+</html>
